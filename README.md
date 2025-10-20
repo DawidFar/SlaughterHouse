@@ -60,13 +60,6 @@ It provides two RPCs:
 { "animalId": 1 }
 ```
 
-## What to upload to GitHub
-- All source files under `src/`
-- `src/main/proto/slaughterhouse.proto`
-- `scripts/init_db.sql`
-- `pom.xml`
-- `README.md`
-
 ## Notes
 - Tests assume a running PostgreSQL instance; adjust DB env vars as needed.
 - For production use, add connection pooling (HikariCP) and better error handling.
