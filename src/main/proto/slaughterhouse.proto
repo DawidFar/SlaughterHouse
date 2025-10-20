@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.slaughterhouse.grpc";
+option java_outer_classname = "SlaughterhouseProto";
+
+service SlaughterhouseService {
+  rpc GetAnimalsByProduct (ProductRequest) returns (AnimalList);
+  rpc GetProductsByAnimal (AnimalRequest) returns (ProductList);
+}
+
+message ProductRequest {
+  int32 productId = 1;
+}
+
+message AnimalRequest {
+  int32 animalId = 1;
+}
+
+message Animal {
+  int32 id = 1;
+  string registrationNumber = 2;
+}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+}
+
+message AnimalList {
+  repeated Animal animals = 1;
+}
+
+message ProductList {
+  repeated Product products = 1;
+}
