@@ -112,5 +112,4 @@ mvn test
 ### 💬 Notes
 
 - The service uses a direct PostgreSQL connection (no ORM).  
-- Error handling is basic but functional for assignment purposes.  
-- To make it more robust, a connection pool (like HikariCP) could be added.  
+- Error handling is basic but functional for assignment purposes.
